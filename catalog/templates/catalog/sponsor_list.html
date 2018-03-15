@@ -8,12 +8,12 @@
 
       {% for sponsor in sponsor_list %}
       <li>
-        <a href="{{ sponsor.get_absolute_url }}">{{sponsor.sponsor_name}},{{sponsor_kala}}({{sponsor.zakaz_product}})</a> ({{sponsor.printitya_zakaz}})
+          <a href="{{ sponsor.get_absolute_url }}">{{sponsor.sponsor_name}}, <p>Onimdi kabyldagan kun</p>{{sponsor.printitya_zakaz}}</a>
       </li>
       {% endfor %}
 
     </ul>
     {% else %}
-     
-    {% endif %}       
+
+    {% endif %}
 {% endblock %}

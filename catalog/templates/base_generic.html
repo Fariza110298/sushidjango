@@ -13,7 +13,9 @@
   {% load static %}
   <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
-
+<body style="color:Yellow; background-color:#D358F7">
+<!--<img src="../images/sss.png" width="1400" height="200">-->
+<img src="../images/sss.png" align="left" width="1400" height="128" />
 <body>
 
   <div class="container-fluid">
@@ -22,10 +24,10 @@
       <div class="col-sm-2">
       {% block sidebar %}
       <ul class="sidebar-nav">
-          <li><a href="{% url 'index' %}">Home</a></li>
-          <li><a href="{% url 'spisokmenus' %}">SpisokMenus</a></li>
-          <li><a href="{% url 'sponsors' %}">Sponsors</a></li>
-     	  <li><a href="">SushiTypes</a></li>
+          <li><strong> <a href="{% url 'index' %}">Home</a></strong></li>
+          <li><strong> <a href="{% url 'spisokmenus' %}">SpisokMenus</a></strong></li>
+          <li><strong> <a href="{% url 'sponsors' %}">Sponsors</a> </strong></li>
+     	  <li><strong> <a href="">SushiTypes</a></strong></li>
 
         
       </ul>
