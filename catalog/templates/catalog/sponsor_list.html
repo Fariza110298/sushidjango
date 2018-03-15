@@ -1,0 +1,19 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Sponsor List</h1>
+
+    {% if sponsor_list %}
+    <ul>
+
+      {% for sponsor in sponsor_list %}
+      <li>
+        <a href="{{ sponsor.get_absolute_url }}">{{sponsor.sponsor_name}},{{sponsor_kala}}({{sponsor.zakaz_product}})</a> ({{sponsor.printitya_zakaz}})
+      </li>
+      {% endfor %}
+
+    </ul>
+    {% else %}
+     
+    {% endif %}       
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Sushiname: {{ spisokmenu.sushiname }}</h1>
+
+  <p><strong>Sponsor:</strong> <a href="{% url 'sponsor-detail' spisokmenu.sponsor.pk %}">{{ spisokmenu.sponsor }}</a></p><!-- sponsor detail link not yet defined -->
+  <p><strong>Resept:</strong> {{ spisokmenu.resept }}</p>
+  <p><strong>Sushiprice:</strong> {{ spisokmenu.sushiprice }}</p>
+  <p><strong>Language:</strong> {{ spisokmenu.language }}</p>
+  <p><strong>Sushitype:</strong> {% for sushitype in spisokmenu.shushitype.all %} {{ sushitype }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>
+
+  <div style="margin-left:20px;margin-top:20px">
+    <h4>Copies</h4>
+
+
+  </div>
+{% endblock %}

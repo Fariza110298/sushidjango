@@ -1,0 +1,19 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>SushiMenu List</h1>
+
+    {% if spisokmenu_list %}
+    <ul>
+
+      {% for spisokmenu in spisokmenu_list %}
+      <li>
+        <a href="{{ spisokmenu.get_absolute_url }}">{{ spisokmenu.sushiname }}</a> ({{spisokmenu.sponsor}})
+      </li>
+      {% endfor %}
+
+    </ul>
+    {% else %}
+      
+    {% endif %}       
+{% endblock %}
